@@ -1,0 +1,225 @@
+
+
+\documentclass[UTF8]{ctexart}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathdots}
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+\section{常识}
+
+正交阵 $A^{T}A=AA^{T}=E$, $A^{-1}=A^{T} , |A|^2 =1$
+
+
+实对称 $A^{T}=A$
+
+反对称 $A^{T}=-A$
+
+A为实矩阵，若$A^{T}A=0\text{则}$$a_{i}=0,A=0$
+$a_ij=A_ij \rightarrow A^*=A^T$ \\
+
+正交向量内积为0
+
+n阶行列式全部展开式总共n！项，每行取自不同行不同列的乘积
+
+n$\geq$2时，n！是偶数
+
+逆对角线正负号$(-1)^{\frac{n(n-1)}{2}}$
+
+$(A^{*})^{*}=|A|^{n-2}A$
+
+$(-A)^*=(-1)^{n-1} A^*$
+
+$|2En|=2^n$
+
+
+$A+A^{T}$是对称矩阵，$A-A^{T}$是反对称矩阵
+
+已知$a_{ij}=A_{ij} , \mbox{所以} A^* =A^T ,$
+
+特征量不能为零
+
+$r(A^TA)=r(A)$
+
+可逆矩阵首先是方阵
+
+AP=B P为A到B的过渡矩阵
+
+\section{合同}
+
+定义 C可逆，$B=C^{T}AC  \rightarrow A\simeq B$
+
+标准型 只有平方项
+
+规范型 只有 0 1 -1
+
+\section{范德蒙行列式}
+
+$\begin{vmatrix}1 & 1 & \cdots & 1\\
+x_{1} & x_{2} & \cdots & x_{3}\\
+\vdots & \vdots & \vdots & \vdots\\
+x_{1}^{n-1} & x_{2}^{n-2} & \vdots & x_{3}^{n-1}
+\end{vmatrix}=\prod_{1\leq i<j\leq n}(x_{j}-s_{i})$
+
+\section{拉普拉斯展开式}
+
+$\begin{vmatrix}O & A_{n\times n}\\
+B_{m\times m} & O
+\end{vmatrix}$=$\begin{vmatrix}C & A\\
+B & O
+\end{vmatrix}=\begin{vmatrix}O & A\\
+B & C
+\end{vmatrix}$=$(-1)^{mn}|A||B|$
+
+$\begin{array}{|cc|}
+A_{mm} & O\\
+O & B_{nn}
+\end{array}$=$\begin{vmatrix}A & C\\
+O & B
+\end{vmatrix}=\begin{vmatrix}A & O\\
+C & B
+\end{vmatrix}=|A||B|$
+
+A=$\begin{bmatrix} &  &  & A_{1}\\
+ &  & A_{2}\\
+ & \iddots\\
+A_{n}
+\end{bmatrix}$,$A^{-1}=\begin{bmatrix} &  &  & A_{n}^{-1}\\
+ &  & \iddots\\
+ & A_{2}^{-1}\\
+A_{1}^{-1}
+\end{bmatrix}$
+
+$\begin{bmatrix}A & O\\
+O & B
+\end{bmatrix}^{-1}=\begin{bmatrix}A^{-1} & O\\
+O & B^{-1}
+\end{bmatrix}$
+
+$\begin{bmatrix}A & O\\
+O & B
+\end{bmatrix}^{n}=\begin{bmatrix}A^{n} & O\\
+O & B^{n}
+\end{bmatrix}$
+
+\section{初等变换}
+
+单位矩阵经过一次初等变换称初等矩阵
+
+初等矩阵都是可逆矩阵
+
+可逆矩阵可表示一系列初等矩阵的乘积
+
+\section{向量组等价}
+
+等价向量组，相互线性表出
+
+向量组和它的极大线性无关组是等价向量组 \\
+两向量组等秩$\nrightarrow $两向量组等价  \\
+向量组$a_{1},a_{2},a_{3},\ldots,a_{s}$线性无关，$a_{1},a_{2},a_{3},\ldots,a_{s},b$相关，b可由a1,a2,a3…as线性表出，表法唯一
+
+向量组线性无关，增加一维的廷伸向量组无关
+
+廷伸向量组相关，原向量组相关
+
+含有零向量或成比例的向量组线性相关
+
+\section{矩阵等价}
+
+存在可逆矩阵PQ使$PAQ=B$，则$A\cong B$
+
+两个同型矩阵等价的充分必要条件是秩相等
+
+\section{相似}
+$P^{-1}AP=B \rightarrow A \sim B$ \\
+A相似B $\rightarrow$  r(A)=r(B),|A|=|B|,特征多项式/特征值相同 \\
+对称矩阵的两个特征值对应的特征向量正交 \\
+A是n阶对称矩阵,必有正交矩阵P,使$P^{-1}AP=P^TAP=\varLambda$ \\
+$\lambda$是A的特征方程的k重根,則矩阵A-$\lambda$E的秩R=n-k,对应特征方程有k个线性无关特征向量 \\
+A、B均是实对称矩阵，A、B相似的充分必要条件是A、B有相同的特征值 \\
+可相似对角化，  有不同的特征值 \\
+
+
+\section{施密特正交化}
+
+$\beta_{1}=\alpha_{1}$
+
+$\beta_{2}=\alpha_{2}-\frac{(\alpha_{2},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1}$
+
+$\beta_{n}=\alpha_{n}-\frac{(\alpha_{n},\beta_{n-1})}{(\beta_{n-1},\beta_{n-1})}\beta_{n-1}-\frac{(\alpha_{n},\beta_{n-2})}{(\beta_{n-2},\beta_{n-2})}\beta_{n-2}-\cdots-\frac{(\alpha_{n},\beta_{1})}{(\beta_{1},\beta_{1})}\beta_{1}$
+
+\section{迹}
+
+迹Tr 方阵对角线所有元素之和
+
+Tr(AB)=Tr(BA) , Tr(ABC)≠Tr(BAC)\_增加C不成立
+
+\section{秩}
+
+设A为m{*}n矩阵
+
+r(AB)$\leq$min\{r(A),r(B)\}
+
+AB=O r(A)+r(B)$\leq$n
+
+$r(A)+r(B)\leq r\begin{pmatrix}A & O\\
+C & B
+\end{pmatrix}\leq r(A)+r(B)+r(C)$
+
+r(A+B)<=r(A|B)<=r(A)+r(B)
+
+r(A)<n-1,则|A|的全部代数余子式都为0 \\
+r(A)=n-1 , |A|=0 \\
+$|A*|=|A|^{n-1}$
+
+r(A)=r 个 独立未知量 , n-r 个 自由未知量,解向量
+
+\section{正定}
+A实对称 ，
+\begin{enumerate}
+  \item 必相似于对角阵，且存在正交阵Q，$Q^{-1}AQ=Q^TAQ$=对角阵
+  \item A特征值为实数，特征向量为实向量
+  \item 属于不同特征值的特征向量正交
+\end{enumerate}
+
+  A正定时，$kA，A^T , A^k , A^{-1} , A^* , f(A)\mbox{系数大于零} $都正定 \\
+
+  A正定$\rightarrow$A实对称 \\
+ $A^*$正定$\rightarrow$A正定  反之不成立 \\
+任给二次型f ,总有正交变换X=Py,使f化标准型,若$A^T=A$,存在可逆变换×=Cz使f为标准型 \\
+
+配方法
+$\begin{cases}
+  x_1=y_1+y_2 \\
+  x_2=y_1-y_2 \\
+  X_3=y_3
+\end{cases}$
+
+A正定充要
+\begin{enumerate}
+  \item 对任意$x\neq 0$有 $x^T A x > 0$
+  \item 正惯性 = n
+  \item 存在可逆矩阵D 使$D^TD$
+  \item $A\simeq E$
+  \item 特值全大于零
+  \item 顺序主子式全大于零
+\end{enumerate}
+
+A正定必要
+\begin{enumerate}
+  \item $a_{ij} >0 $
+  \item |A| > 0
+\end{enumerate}
+
+\section{合同}
+合同不改变正负惯性指数 \\
+合同的充要条件 有相同的正负惯性指数 \\
+A B 合同 则 r(A)=r(B) ,|A| |B| 同号 \\
+\section{???}
+$XTAX=0 \rightarrow A^T=-A$
+
+
+\end{document}
